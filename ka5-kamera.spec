@@ -34,6 +34,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Digital camera support for KDE applications. This package allows any
 KDE application to access and manipulate pictures on a digital camera.
 
+%description -l pl.UTF-8
+Wsparcie dla cyfrowych aparatów fotograficznych. Ten pakiet pozwala
+dowolnej aplikacji KDE na dostęp i operowanie zdjęciami z aparatu cyfrowego.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
