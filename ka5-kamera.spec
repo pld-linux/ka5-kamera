@@ -1,15 +1,15 @@
-%define		kdeappsver	21.04.3
+%define		kdeappsver	21.08.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		kamera
 Summary:	Kamera
 Name:		ka5-%{kaname}
-Version:	21.04.3
+Version:	21.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	be1292862177ebecaf97ad3e38d7e450
+# Source0-md5:	ac4265f3461bd911ef68ba9182c0551f
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
@@ -36,7 +36,8 @@ KDE application to access and manipulate pictures on a digital camera.
 
 %description -l pl.UTF-8
 Wsparcie dla cyfrowych aparatów fotograficznych. Ten pakiet pozwala
-dowolnej aplikacji KDE na dostęp i operowanie zdjęciami z aparatu cyfrowego.
+dowolnej aplikacji KDE na dostęp i operowanie zdjęciami z aparatu
+cyfrowego.
 
 %prep
 %setup -q -n %{kaname}-%{version}
@@ -63,8 +64,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/qt5/plugins/kcm_kamera.so
-%attr(755,root,root) %{_libdir}/qt5/plugins/kio_kamera.so
-%{_datadir}/kservices5/camera.protocol
+%{_libdir}/qt5/plugins/kf5/kio/kio_kamera.so
 %{_datadir}/kservices5/kamera.desktop
 %{_datadir}/solid/actions/solid_camera.desktop
 %{_datadir}/metainfo/org.kde.kamera.metainfo.xml
