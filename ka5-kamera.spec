@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	22.08.2
+%define		kdeappsver	22.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kamera
 Summary:	Kamera
 Name:		ka5-%{kaname}
-Version:	22.08.2
+Version:	22.08.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	332f56890b8d44cd0d8edc960ea7de40
+# Source0-md5:	d8558603c66175900c12205684523cd3
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
